@@ -10,7 +10,7 @@ namespace HotelManagementSystem.Controllers
 {
     public class HotelController : ApiController
     {
-        private static int _count = 0;
+        //private static int _count = 0;
         private static List<Hotel> _hotels = new List<Hotel>();
 
         public IHttpActionResult GetAllHotels()
@@ -53,7 +53,7 @@ namespace HotelManagementSystem.Controllers
                 if (!ModelState.IsValid)
                     return Content(HttpStatusCode.BadRequest, "Model state is invalid");
 
-                hotel.Id = ++_count;
+                //hotel.Id = ++_count;
                 _hotels.Add(hotel);
                 return Ok(_hotels);
             }
